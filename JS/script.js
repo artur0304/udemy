@@ -1,22 +1,16 @@
-// const res=confirm("Are you here?");
-// console.log(res);
+const numberOfFilmes = prompt("Сколько фильмов вы уже смотрели?", "");
 
-// const answer = +prompt("are you 18?","");
-// console.log(answer+5);
-//  const answers = [];
-// answers[0] = prompt("are you 18?","");
-// answers[1] = prompt("what's your name?","");
-// answers[2] = prompt("do you like our site?","");
 
-// // console.log(typeof(answers));
-// const category = 'toys';
-// console.log(`http://someurl.com/${category}/5`);
-let incr = 10,
-    decr = 10;
+let personalMovieDB={
+    count : numberOfFilmes,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// incr++;
-// decr--;
-console.log(++incr);
-console.log(--decr);
+const lastFilm = prompt("Один из последних просмотренных фильмов","");
+const ratingLastFil = prompt("На сколько оцените его","");
 
-console.log(2*4 === "8");
+personalMovieDB.movies[lastFilm]=ratingLastFil;
+console.log(personalMovieDB);
